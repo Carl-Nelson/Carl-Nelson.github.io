@@ -1,0 +1,46 @@
+    body {
+        margin-left: 100px;
+        width: 800px;
+        background-color: BlanchedAlmond;
+    }
+    
+    h2 {
+        color: steelblue;
+    }
+    
+    article {
+        border: 1px dashed lightgray;
+        padding: 16px;
+    }
+
+    .bluetext {
+        color: steelblue;
+    }
+    
+    .bannerDiv {
+        float: left;
+        margin-bottom: 20px;
+    }
+    
+    .blogTitleDiv {
+        float: left;
+        margin-left: 10px;
+    }
+    
+    .dividingLine {
+        border-bottom: 1px solid green;
+        clear: both;
+    }
+    
+    .blueTextBigFont {
+        color: steelblue;
+        font-size: 28px;
+    }
+    
+    #StellaratorPic {
+        float: left;
+    }
+    
+    #ICFPic {
+        float: right;
+    }
