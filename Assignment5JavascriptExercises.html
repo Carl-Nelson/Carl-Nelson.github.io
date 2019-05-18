@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 5: Javascript Exercises</title>
+</head>
+<body>
+    <p>Heck yeah, straight-up coding. My comfort zone.</p>
+    
+    <h2>Part 1: Questions A</h2>
+    
+    <ol type ="a">
+        <li>Undefined. Javascript is weird, and variables don't have types until something's put in them, and that one is empty.</li>
+        <li>False. Two negatives make a positive, and similarly, the two 'not' operators cancel each other out.</li>
+        <li>1. Divide 7 evenly by 2, and you get a remainder of 1. That's modulus!</li>
+        <li>Jim Smith. Why? Because that's what happens when you add a string and a string literal together like that, is all I can say.</li>
+        <li>52. myVar is a string. Adding the string "5" to the (presumed integer) 2 just jams them together in the output like you're joining strings.</li>
+    </ol>
+    
+    <h2>Part 2: Questions B</h2>
+    
+    <ol type="1">
+        <li>They're... completely different languages, though I'm mostly familiar with Java. Java is compiled to "bytecode" which the JVM converts on the fly into executable code.<br>
+            Javascript is interpreted, run directly by the interpreter(like an internet browser perhaps) without previous compilation. Which makes it somehow even slower than Java! <br>
+            It's also even more easily portable than Java, allows dynamic typing (some people view that as a positive), and the web as we know it wouldn't function without it.</li>
+        <li>'+' is a binary operator. It adds the second operand to the first one, with the precise behavior depending on the type(s) of data. Actually apparently you can have nothing at all on the left. That's weird.<br>
+            I guess ' +whatever' has the effect of casting whatever into a number. <br>
+            '++' is a unary opereator. It just increments the operand by one.</li>
+        <li>window.alert outputs text to a popup window. console.log outputs text to the console, which you can only see if you've got the console open.<br>
+            document.write writes html(!!!) to the page. Tags n' everything.</li>
+        <li>'=' is an assignment operator. It assigns the value of the second operand to the first, which should be a variable.
+            '==' is a comparison operator. It returns true if the two operands are equal, false if not. It has some <a href="https://www.youtube.com/watch?v=et8xNAc2ic8">weird as heck behavior</a> in javascript, due to the funny typing.<br>
+            '===' returns whether the two operands are equal AND the same type.</li>
+        <li>While checks the loop condition before entering the body of the loop, do while checks it afterwards. Do while will always run at least once; a while loop might never.</li>
+    </ol>
+    
+    <h2>Part 3: Code Exercise</h2>
+    <p id="welcomeText"></p>
+    <script>
+        var userName = prompt("What's your first name?").toUpperCase();
+        
+        for (var i = 0; i < 3; i++) {
+            document.write(`Welcome ${userName}!<br>`);
+        }
+    </script>
+    
+</body>
+</html>
