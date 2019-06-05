@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mini-Battleship!</title>
+    <link rel="stylesheet" type="text/css" href="CSS/battleship.css">
+    <script>
+        var hits = 0;
+        var tries = 8;
+        var gameboard = new Array(false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false);
+        var battleshipStart = Math.floor(Math.random() * 18);
+
+        for (i = 0; i < 3; i++){
+            gameboard[battleshipStart] = true;
+            battleshipStart++;
+        }
+    </script>
+</head>
+<body>
+    <div class="gameDiv">
+        <h2>It's Mini-Battleship!</h2>
+        <p>The most exciting new game from the creator of that one madlib thing!</p>
+        <hr>
+        <p id="triesDisplay">Guesses remaining: 8</p>
+        <p id="statusDisplay">Click on a space to fire!</p>
+        <span>
+            <button id="shoot1" class="shootButton" onclick="fire(0,this)">&nbsp;</button>
+            <button id="shoot2" class="shootButton" onclick="fire(1,this)">&nbsp;</button>
+            <button id="shoot3" class="shootButton" onclick="fire(2,this)">&nbsp;</button>
+            <button id="shoot4" class="shootButton" onclick="fire(3,this)">&nbsp;</button>
+            <button id="shoot5" class="shootButton" onclick="fire(4,this)">&nbsp;</button>
+            <button id="shoot6" class="shootButton" onclick="fire(5,this)">&nbsp;</button>
+            <button id="shoot7" class="shootButton" onclick="fire(6,this)">&nbsp;</button>
+            <button id="shoot8" class="shootButton" onclick="fire(7,this)">&nbsp;</button>
+            <button id="shoot9" class="shootButton" onclick="fire(8,this)">&nbsp;</button>
+            <button id="shoot10" class="shootButton" onclick="fire(9,this)">&nbsp;</button>
+            <button id="shoot11" class="shootButton" onclick="fire(10,this)">&nbsp;</button>
+            <button id="shoot12" class="shootButton" onclick="fire(11,this)">&nbsp;</button>
+            <button id="shoot13" class="shootButton" onclick="fire(12,this)">&nbsp;</button>
+            <button id="shoot14" class="shootButton" onclick="fire(13,this)">&nbsp;</button>
+            <button id="shoot15" class="shootButton" onclick="fire(14,this)">&nbsp;</button>
+            <button id="shoot16" class="shootButton" onclick="fire(15,this)">&nbsp;</button>
+            <button id="shoot17" class="shootButton" onclick="fire(16,this)">&nbsp;</button>
+            <button id="shoot18" class="shootButton" onclick="fire(17,this)">&nbsp;</button>
+            <button id="shoot19" class="shootButton" onclick="fire(18,this)">&nbsp;</button>
+            <button id="shoot20" class="shootButton" onclick="fire(19,this)">&nbsp;</button>
+        </span>
+    </div>
+    <div class="gameOver">
+        <h1>GAME OVER</h1>
+        <p>Refresh the page to try again.</p>
+    </div>
+    <div class="winScreen">
+        <h1>YOU WON</h1>
+        <p>Refresh the page to try again.</p>
+    </div>
+    <script>
+        function fire(position, button){
+            if (gameboard[position] === true) {
+                button.style.color = "red";
+                button.innerText = "X"
+                hits++;
+                document.getElementById("statusDisplay").textContent = "Hit!";
+            }
+            else {
+                button.innerText = "-";
+                tries--;
+                document.getElementById("statusDisplay").textContent = "Miss. Try again!"
+                document.getElementById("triesDisplay").textContent = "Guesses remaining: " + tries;
+            }
+            if (hits === 3) {
+                alert("You win!");
+                document.getElementsByClassName("winScreen")[0].style.display = "block"; //this sure is lot of layers of access all in one statement
+                document.getElementsByClassName("gameDiv")[0].style.display = "none";
+            }
+            if (tries === 0) {
+                alert("You lose! Better luck next time.");
+                document.getElementsByClassName("gameDiv")[0].style.display = "none";
+                document.getElementsByClassName("gameOver")[0].style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

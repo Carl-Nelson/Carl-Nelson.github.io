@@ -1,0 +1,51 @@
+body {
+    background-image: url("../images/battleship.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shootButton {
+    border-style: outset;
+    font-family: "Lucida Console","Courier New", monospace;
+    padding: 15px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.shootButton:active {
+    border-style: inset;
+}
+
+.gameDiv {
+    padding: 20px;
+    opacity: 0.9;
+    background-color: #cccccc;
+    border-radius: 25px;
+    height: 250px;
+    width: 1000px;
+    text-align: center;
+}
+
+.gameOver {
+    display: none;
+    padding: 20px;
+    opacity: 0.9;
+    background-color: #cccccc;
+    border-radius: 25px;
+    height: 250px;
+    width: 1000px;
+    text-align: center;
+}
+
+.winScreen {
+    display: none;
+    padding: 20px;
+    opacity: 0.9;
+    background-color: #cccccc;
+    border-radius: 25px;
+    height: 250px;
+    width: 1000px;
+    text-align: center;
+}
