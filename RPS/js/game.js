@@ -6,10 +6,10 @@ var humanScore = 0;
 var computerScore = 0;
 var tieScore = 0;
 var round = 1; //not strictly necessary, but a nice shorthand.
-var choices = ["rock","paper","scissors"]; //just for quick conversion from an index to the right string
-var rock = 0; //more nonsense to make the code easier to read
-var paper = 1;
-var scissors = 2
+const choices = ["rock","paper","scissors"]; //just for quick conversion from an index to the right string
+const rock = 0; //more nonsense to make the code easier to read
+const paper = 1;
+const scissors = 2
 
 // declare image source arrays: human images, computer images, and rollover images (used by both human and computer)
 var srcRollover = [ "images/rock_over.jpg", "images/paper_over.jpg", "images/scissors_over.jpg" ];
